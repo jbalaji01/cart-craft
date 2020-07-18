@@ -1,0 +1,15 @@
+
+entity Product {
+	productName String,
+    description String,
+    price Float,
+    image String
+}
+
+entity CartItem {
+	quantity Integer
+}
+
+relationship OneToOne {
+   CartItem to Product
+}
