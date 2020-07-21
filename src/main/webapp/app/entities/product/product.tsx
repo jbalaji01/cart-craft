@@ -12,6 +12,12 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
 export interface IProductProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
+export const CartItem = (props: ICartItemProps) => {
+  useEffect(() => {
+    props.getEntities();
+  }, []);
+};
+
 export const Product = (props: IProductProps) => {
   useEffect(() => {
     props.getEntities();
@@ -22,7 +28,7 @@ export const Product = (props: IProductProps) => {
   return (
     <div>
       <h2 id="product-heading">
-        Products {productList.length}
+        Products
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp; Create new Product

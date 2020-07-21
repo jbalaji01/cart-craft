@@ -55,6 +55,8 @@ export const App = (props: IAppProps) => {
   );
 };
 
+
+
 const mapStateToProps = ({ authentication, applicationProfile }: IRootState) => ({
   isAuthenticated: authentication.isAuthenticated,
   isAdmin: hasAnyAuthority(authentication.account.authorities, [AUTHORITIES.ADMIN]),
@@ -62,6 +64,9 @@ const mapStateToProps = ({ authentication, applicationProfile }: IRootState) => 
   isInProduction: applicationProfile.inProduction,
   isSwaggerEnabled: applicationProfile.isSwaggerEnabled,
 });
+
+
+
 
 const mapDispatchToProps = { getSession, getProfile };
 

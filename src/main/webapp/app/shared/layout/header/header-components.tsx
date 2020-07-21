@@ -24,7 +24,16 @@ export const Home = props => (
   <NavItem>
     <NavLink tag={Link} to="/" className="d-flex align-items-center">
       <FontAwesomeIcon icon="home" />
-      <span>Home</span>
+      <span>Main page</span>
+    </NavLink>
+  </NavItem>
+);
+
+export const ProductSpa = props => (
+  <NavItem>
+    <NavLink tag={Link} to="/product/spa" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="circle" />
+      <span>Order</span>
     </NavLink>
   </NavItem>
 );

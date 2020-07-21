@@ -10,6 +10,7 @@ import PasswordResetFinish from 'app/modules/account/password-reset/finish/passw
 import Logout from 'app/modules/login/logout';
 import Home from 'app/modules/home/home';
 import Entities from 'app/entities';
+import ProductSpa from 'app/entities/product/product-spa';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import PageNotFound from 'app/shared/error/page-not-found';
@@ -30,6 +31,7 @@ const Routes = () => (
     <Switch>
       <ErrorBoundaryRoute path="/login" component={Login} />
       <ErrorBoundaryRoute path="/logout" component={Logout} />
+      <ErrorBoundaryRoute path="product/spa" component={ProductSpa} />
       <ErrorBoundaryRoute path="/account/register" component={Register} />
       <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
       <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
